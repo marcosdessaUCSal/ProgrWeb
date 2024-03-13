@@ -1,0 +1,32 @@
+body {
+    background-color: gray;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    background-color: lightgray;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    width: 450px;
+    
+}
+
+.visor {
+    width: 85%;
+    background-color: black;
+    color: rgb(144, 238, 144, 0.7);
+    margin: auto;
+    padding: 8px;
+    padding-right: 20px;
+    font-size: 3em;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 2px 2px 8px white;
+    border: 8px solid steelblue;
+    border-radius: 15px;
+    box-shadow: inset 10px 20px 30px 10px rgb(255, 255, 255, 0.3);
+    text-align: right;
+}
