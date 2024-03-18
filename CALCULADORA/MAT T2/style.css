@@ -5,25 +5,87 @@ body {
     text-align: center;
 }
 
-
-
 .container {
     background-color: lightgray;
     width: 450px;
     margin: auto;
-    margin-top: 50px;
-    padding: 20px;
+    margin-top: 30px;
+    /* padding: 20px; */
+    border-radius: 15px;
+    box-shadow: 20px 20px 30px 20px rgb(0, 0, 0, 0.5);
+}
+
+.container2 {
+    border-radius: 15px;
+    box-shadow: inset -6px -6px 6px 6px rgb(0, 0, 0, 0.5);
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 .visor {
-    width: 80%;
+    width: 75%;
+    text-align: right;
     margin: auto;
     border: 8px solid rgb(70, 130, 180);
     border-radius: 15px;
     background-color: black;
-    color: lightgreen;
+    color: rgb(0, 255, 0, 0.4);
     font-size: 3em;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 700;
-    padding: 10px;
+    padding: 6px;
+    padding-right: 25px;
+    text-shadow: 3px 0 10px rgb(0, 255, 0);
+    box-shadow: inset 15px 15px 10px 10px rgb(255, 255, 255, 0.2);
+}
+
+.container-teclas {
+    width: 85%;
+    padding: 5px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+    border: 6px solid gray;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0.7fr;
+}
+
+.tecla {
+    padding: 8px;
+    background-color: white;
+    color: steelblue;
+    margin: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2em;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px 3px rgb(0, 0, 0, 0.5);
+}
+
+.tecla-esp {
+    padding: 8px;
+    background-color: steelblue;
+    color: white;
+    margin: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2em;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px 3px rgb(0, 0, 0, 0.7);
+}
+
+.tecla:active {
+    padding-top: 10px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 6px;
+    box-shadow: 1px 1px 2px 2px rgb(0, 0, 0, 0.7);
+}
+
+.tecla-esp:active {
+    padding-top: 10px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 6px;
+    box-shadow: 1px 1px 2px 2px rgb(0, 0, 0, 1);
 }
