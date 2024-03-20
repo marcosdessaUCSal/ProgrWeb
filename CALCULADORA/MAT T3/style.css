@@ -72,14 +72,14 @@ body {
     color: rgb(0, 200, 0, 0.3);
     background-color: black;
     text-align: right;
-    width: 85%;
+    width: 80%;
     margin: auto;
     /* margin-top: 20px; */
     padding: 10px;
-    padding-right: 25px;
+    padding-right: 40px;
     border: 8px solid steelblue;
     border-radius: 20px;
-    font-size: 3em;
+    font-size: 3.5em;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 700;
     text-shadow: 2px 2px 15px lightgreen;

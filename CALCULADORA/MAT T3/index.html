@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <div id="visor-id" class="visor">
-            0123456789
+            0
         </div>
         <div class="container-teclas">
             <div onclick="" class="tecla-esp">C</div>
@@ -30,19 +30,17 @@
             <div onclick="" class="tecla">5</div>
             <div onclick="" class="tecla">6</div>
             <div onclick="" class="tecla-esp">-</div>
-            <div onclick="" class="tecla">1</div>
+            <div onclick="digito('1')" class="tecla">1</div>
             <div onclick="" class="tecla">2</div>
             <div onclick="" class="tecla">3</div>
             <div onclick="" class="tecla-esp">+</div>
-            <div onclick="" class="tecla">.</div>
-            <div onclick="" class="tecla">0</div>
+            <div onclick="digito('.')" class="tecla">.</div>
+            <div onclick="digito('0')" class="tecla">0</div>
             <div onclick="" class="tecla-esp">%</div>
             <div onclick="" class="tecla-esp">=</div>
         </div>
     </div>
-    <script>
-        document.getElementById('visor-id').innerHTML = '0';
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
