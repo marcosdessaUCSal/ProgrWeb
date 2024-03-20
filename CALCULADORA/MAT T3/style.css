@@ -13,16 +13,59 @@ body {
     margin: auto;
     margin-top: 50px;
     border-radius: 20px;
-    box-shadow: 20px 20px 30px 10px rgb(0, 0, 0, 0.4);
+    box-shadow: 20px 20px 30px 10px rgb(0, 0, 0, 0.4),
+        inset -6px -6px 6px 6px rgb(0, 0, 0, 0.4);
 }
 
-.container2 {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    width: 100%;
+.container-teclas {
     margin: 0;
-    border-radius: 20px;
-    box-shadow: inset 10px 10px 10px 10px rgb(0, 0, 0, 0.5);
+    padding: 10px;
+    width: 90%;
+    background-color: white;
+    border: 6px solid gray;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.tecla {
+    padding: 8px;
+    background-color: white;
+    color: steelblue;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 2em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: 2px 2px 3px 3px rgb(0, 0, 0, 0.4);
+}
+
+.tecla-esp {
+    padding: 8px;
+    background-color: steelblue;
+    color: white;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 2em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-shadow: 2px 2px 3px 3px rgb(0, 0, 0, 0.7);
+}
+
+.tecla:active {
+    padding-top: 10px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 6px;
+    box-shadow: 1px 1px 2px 2px rgb(0, 0, 0, 0.7);
+}
+
+.tecla-esp:active {
+    padding-top: 10px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 6px;
+    box-shadow: 1px 1px 2px 2px rgb(0, 0, 0, 0.9);
 }
 
 .visor {
