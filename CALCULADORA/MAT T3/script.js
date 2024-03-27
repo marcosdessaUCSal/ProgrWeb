@@ -6,6 +6,7 @@ class Calculadora {
         this.iniciouSegundo = false;
         this.estadoErro = false;
         this.memTemp = '';
+        this.memoria = 0;
         this.op = {
             NOP: 0,
             DIV: 1,
@@ -14,8 +15,6 @@ class Calculadora {
             SUM: 4
         };
         this.opAtual = this.op.NOP;
-        // EXISTEM OUTRO ATRIBUTOS?
-
     }
 
     // Retorna o contúdo do visor
@@ -65,6 +64,7 @@ class Calculadora {
         this.memTemp = this.nrVisor;
     }
 
+    // Executa operação: tecla IGUAL
     igual() {
         if (this.estadoErro) return;
         let num1 = parseFloat(this.memTemp);
@@ -105,6 +105,30 @@ class Calculadora {
         this.estadoErro = false;
         this.opAtual = this.op.NOP;
     }
+
+    // tecla M+ : acrescenta à memória o número no visor
+    teclaMmais() {
+        if (this.estadoErro) return;
+        this.memoria += parseFloat(this.nrVisor);
+    }
+
+    // tecla M- : subtrai da memória o número no visor
+    teclaMmenos() {
+        if (this.estadoErro) return;
+        this.memoria -= parseFloat(this.nrVisor);
+    }
+
+    // tecla RM : recupera o conteúdo da memória -> coloca no visor
+    teclaRM() {
+        if (this.estadoErro) return;
+        this.nrVisor = String(this.memoria);
+    }
+
+    // tecla CLM : limpa totalmente o conteúdo da memória -> atribui 0
+    teclaCLM() {
+        if (this.estadoErro) return;
+        this.memoria = 0;
+    }
     
 }
 
@@ -124,6 +148,7 @@ let digito = (dig) => {
     atualizaVisor();
 }
 
+// RECEBE OPERAÇÃO ATUAL
 let defineOp = (op) => {
     if (calculadora.opAtual != calculadora.op.NOP) {
         igual();
@@ -132,18 +157,38 @@ let defineOp = (op) => {
     calculadora.defineOperacao(op);
 }
 
+// CALCULA A OPERAÇÃO
 let igual = () => {
     calculadora.igual();
     atualizaVisor();
 }
 
+// TECLA C: LIMPA TUDO, EXCETO MEMÓRIA
 let teclaC = () => {
     calculadora.teclaC();
     atualizaVisor();
 }
 
+// M+ ACRESCENTA À MEMÓRIA O NÚMERO ATUAL NO VISOR
+let teclaMmais = () => {
+    calculadora.teclaMmais();
+}
 
+// M- SUBTRAI DA MEMÓRIA O NÚMERO ATUAL NO VISOR
+let teclaMmenos = () => {
+    calculadora.teclaMmenos();
+}
 
+// PÕE NO VISOR O CONTEÚDO DA MEMÓRIA
+let teclaRM = () => {
+    calculadora.teclaRM();
+    atualizaVisor();
+}
+
+// APAGA TODO O CONTEÚDO DA MEMÓRIA
+let teclaCLM = () => {
+    calculadora.teclaCLM();
+}
 
 
 

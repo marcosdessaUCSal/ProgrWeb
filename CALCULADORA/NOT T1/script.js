@@ -65,6 +65,7 @@ class Calculadora {
         this.memTemp = this.nrVisor;
     }
 
+    // Executa operação: tecla igual
     igual() {
         if (this.estadoErro) return;
         if (this.opAtual == this.op.NOP) return;
@@ -97,6 +98,11 @@ class Calculadora {
         this.nrVisor = String(resultado).slice(0, 10);
     }
 
+    // Tecla C - reinicia tudo, exceto memória
+    teclaC() {
+
+    }
+
 }
 
 // ===================================================================
@@ -126,9 +132,15 @@ let igual = () => {
     mostraVisor();
 }
 
+let teclaC = () => {
+
+}
 
 
 
+// ===================================================================
+//  INÍCIO DO PROCESSAMENTO
+// ===================================================================
 
 
 
